@@ -1,74 +1,84 @@
+<!-- First things first code must always be formatted with the correct indentations and stuff, if you use VSC you can literally download the "prettier" plugin which will format your file on save if you set it to
+as you can see after I have saved this file your code has been neatly arranged -->
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anxiety</title>
+    <!-- Generally speaking, script tags should be added to after the closing <body> tag, I will leave a comment below indicating where. This is a very common interview question for beginners and it
+        the reason is because you want your scripts to load after the html so that the user has something to see first then IF you had a massive JS file it would be a better experience that it just loads
+        in the backgound after HTML has loaded. If you load it here and it was big the user would see a blank screen for a few seconds. So its good for optimisation -->
     <script type="text/javascript" src="helpLogic.js"></script>
+    <!-- just like you have done this script tag above your style should be in a separate file. In theory you could write one "style.js" file and reference it in all your HTMLS so you dont have to repeat yourself -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color:rgb(223, 170, 101);
-      
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(223, 170, 101);
+        /* random spaces? */
+      }
 
-        header {
-            background-color:rgb(223, 170, 101);
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            
-        }
+      header {
+        background-color: rgb(223, 170, 101);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-           
-           
-            background-color:rgb(240, 204, 157);
-        }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        /* random spaces? */
+        /* random spaces? */
+        background-color: rgb(240, 204, 157);
+      }
 
-        .content {
-            
-            padding: 20px;
-            
-            text-align: center;
-            margin-top: 70px;
-            color: #fff;
-            font-size: 35px;
-        }
+      .content {
+        padding: 20px;
+        /* random spaces? */
+        text-align: center;
+        margin-top: 70px;
+        color: #fff;
+        font-size: 35px;
+        /* pixel units are less desired, although they have their places sometimes the best thing to use is 'rem' you can look up what that means but essentially 1rem is equal to the 
+        font-size you set on your body tag, which by default is 16px, 1rem = 16px 2rem=32px 1.5rem=24px etc etc... */
+      }
 
-        
-
-        footer {
-            background-color:rgb(223, 170, 101);
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        
-        }
+      footer {
+        background-color: rgb(223, 170, 101);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
     </style>
-</head>
-<body onload="displayAnxietyMessage();">
+  </head>
+  <body onload="displayAnxietyMessage();">
     <header>
-       <h1>Suffering with anxiety?</h1>
+      <h1>Suffering with anxiety?</h1>
     </header>
     <div class="container">
-        <div class="content">
-           <p id="message"></p>
-           <br>
-           <br>
-           <p>Below is a link to the NHS webpage on Anxiety. It will provide you with the knowledge and resources you need to start your journery to feeling better.</p>
-           <br>
-           <br>
-           <a href="https://www.nhs.uk/every-mind-matters/mental-health-issues/anxiety/">Click here for help</a>
-        </div>
+      <div class="content">
+        <p id="message"></p>
+        <!-- generally speaking <br> tags are outdated you should use CSS to mimic spaces, i.e with margin or padding -->
+        <br />
+        <br />
+        <p>
+          Below is a link to the NHS webpage on Anxiety. It will provide you
+          with the knowledge and resources you need to start your journery to
+          feeling better.
+        </p>
+        <br />
+        <br />
+        <a
+          href="https://www.nhs.uk/every-mind-matters/mental-health-issues/anxiety/"
+          >Click here for help</a
+        >
+      </div>
     </div>
-    <footer>
-        &copy;Help2023
-    </footer>
-</body>
+    <footer>&copy;Help2023</footer>
+  </body>
+  <!-- this is where you would add ur script tag -->
 </html>
